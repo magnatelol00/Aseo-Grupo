@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Aseo del Grupo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__tag">TASK_INIT :: APLICACION_WEB_RESPONSIVA</div>
+      <h1 class="header__title">Aseo del Grupo</h1>
+      <p class="header__sub">Gestión semanal de responsables de aseo</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="card card--hoy" id="seccionHoy">
+      <div class="card__label">HOY</div>
+      <div id="diaHoyNombre" class="card__dia">—</div>
+      <div id="responsableHoy" class="card__responsable">Sin asignar</div>
+      <div id="colorHoy" class="card__color-badge"></div>
+      <button class="btn btn--reemplazo" id="btnReemplazo">⚡ Asignar Reemplazo</button>
+    </section>
+
+    <section class="card card--semana">
+      <div class="card__label">SEMANA</div>
+      <ul class="semana-list" id="listaSemana"></ul>
+    </section>
+
+    <section class="card card--integrantes">
+      <div class="card__label">INTEGRANTES</div>
+      <form class="form-agregar" id="formAgregar" novalidate>
+        <input
+          type="text"
+          id="inputNombre"
+          class="form-agregar__input"
+          placeholder="Nombre del integrante..."
+          maxlength="30"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn--agregar">+ Agregar</button>
+      </form>
+      <ul class="integrantes-list" id="listaIntegrantes"></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>Blueprint del Senior — Funcional · SOLID · Clean Code</span>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/ui.js"></script>
+
+</body>
+</html>
